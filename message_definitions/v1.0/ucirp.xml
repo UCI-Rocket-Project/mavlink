@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<mavlink>
+	<include>ardupilotmega.xml</include>
+  	<dialect>2</dialect>
+	<enums>
+		<enum name="MAV_CMD">
+			<entry value="61003" name="MAV_CMD_ACTUATE_SOLENOID" hasLocation="false" isDestination="false">
+				<description>Actuate the solenoids</description>
+				<param index="1" label="s0">Solenoid 0</param>
+				<param index="2" label="s1">Solenoid 1</param>
+				<param index="3" label="s2">Solenoid 2</param>
+				<param index="4" label="s3">Solenoid 3</param>
+				<param index="5" label="s4">Solenoid 4</param>
+				<param index="6" label="s5">Solenoid 5</param>
+			</entry>
+		</enum>
+	</enums>
+	<messages>
+		<!--Useful messages GLOBAL_POSITION_INT, GPS_RAW_INT, GPS_STATUS -->
+		<message id="61000" name="PT_VALUES">
+			<description>TODO: Names must be assigned according to actual PT connected.</description>
+			<field type="double" name="pt0"></field>
+			<field type="double" name="pt1"></field>
+			<field type="double" name="pt2"></field>
+			<field type="double" name="pt3"></field>
+			<field type="double" name="pt4"></field>
+			<field type="double" name="pt5"></field>
+		</message>
+		<message id="61001" name="TC_VALUES">
+			<description>TODO: Names must be assigned according to actual TC connected.</description>
+			<field type="double" name="tc0"></field>
+			<field type="double" name="tc1"></field>
+			<field type="double" name="tc2"></field>
+			<field type="double" name="tc3"></field>
+			<field type="double" name="tc4"></field>
+			<field type="double" name="tc5"></field>
+		</message>
+		<message id="61002" name="Actuate_Solenoid">
+			<description>TODO: Names must be assigned according to actual Solenoid connected.</description>
+			<field type="uint8_t" name="s0"></field>
+			<field type="uint8_t" name="s1"></field>
+			<field type="uint8_t" name="s2"></field>
+			<field type="uint8_t" name="s3"></field>
+			<field type="uint8_t" name="s4"></field>
+			<field type="uint8_t" name="s5"></field>
+		</message>
+	</messages>
+</mavlink>
