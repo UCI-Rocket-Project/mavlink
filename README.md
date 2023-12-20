@@ -1,8 +1,25 @@
 [![Build Status](https://github.com/ArduPilot/mavlink/workflows/Test%20and%20deploy/badge.svg)](https://github.com/ArduPilot/mavlink/actions?query=branch%3Amaster)
 
+
 ## MAVLink ##
 
 MAVLink -- Micro Air Vehicle Message Marshalling Library.
+
+### MAVLink fork for use by UCIRP.
+
+* UCIRP specific messages are present in ``message_definitions/v1.0/ucirp.xml``.
+
+
+Include in your project by running
+```
+git submodule add git@github.com:UCI-Rocket-Project/mavlink.git $dir
+git submodule update --init --recursive
+```
+
+Get latest message definions by:
+```
+git submodule update  --recursive
+```
 
 MAVLink is a very lightweight, header-only message library for communication between drones and/or ground control stations. It consists primarily of message-set specifications for different systems ("dialects") defined in XML files, and Python tools that convert these into appropriate source code for [supported languages](https://mavlink.io/en/#supported_languages). There are additional Python scripts providing examples and utilities for working with MAVLink data.
 
